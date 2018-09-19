@@ -169,7 +169,7 @@
 
 					<p>
 					\[
-					p(y = k | \mathbf{x}, \mathbf{W}) = \frac{e^{z_k}}{\sum_{j=1}^K e^{z_k}}
+					p(y = k | \mathbf{x}, \mathbf{W}) = \frac{e^{z_k}}{\sum_{j=1}^K e^{z_k}}, \quad z_k = \mathbf{w}_k^\intercal\mathbf{x}
 					\]
 					</p>
 				</section>
@@ -177,18 +177,28 @@
 				<section>
 					<h3>Classification Model</h3>
 
-					<ul>
-						<li>\[y \in {1, 2, . . . , K}\] is the true label
-						<li>\[K\] is the total number of labels
-						<li>\[\mathbf{W} = [w_1, . . . , w_K] \in \mathbb{R}^{d\times K}\] is the concatenation of the weight vectors w_k associated with the k-th party
-					</ul>
+					<p>
+					\[
+					L(\mathbf{W}, \mathbf{x}, \gamma) = -\log \frac{e^{z_k}}{\sum_{j=1}^K e^{z_k}} + \gamma ||\mathbf{W}||_F
+					\]
+					</p>
+				</section>
+
+				<section>
+					<h3>Sentiment Index</h3>
+
+					<p>
+					\[
+					\frac{\mathbf{s}^\intercal\mathbf{x}}{||\mathbf{s}||||\mathbf{x}||}
+					\]
+					</p>
 				</section>
 
 				<section>
 					<h3>A proof-of-concept</h3>
 
 					<p>
-						A <a href="https://goo.gl/dUrHzQ">web app</a> has been developed, as a fork and evolution of the <a href="https://github.com/felixbiessmann/fipi">fipi</a> project.
+						A <a href="https://reale.me/respublica">web app</a> has been developed, as a fork and evolution of the <a href="https://github.com/felixbiessmann/fipi">fipi</a> project.
 					</p>
 
 					<p>
